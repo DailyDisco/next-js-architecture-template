@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.1",
     "@commitlint/config-conventional": "^17.4.0",
+    "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "prettier": "^2.8.2"
   }
