@@ -2,7 +2,9 @@ import Head from 'next/head';
 import Footer from '../../common/footer/Footer';
 import Header from '../../common/navbar/Navbar';
 
-export interface IPrimaryLayout {}
+export interface IPrimaryLayout {
+  children: React.ReactNode;
+}
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
   return (
