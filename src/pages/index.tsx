@@ -1,13 +1,33 @@
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
-import SidebarLayout from '../../components/layouts/sidebar/SidebarLayout';
+import Search from '../../components/utility/base/Search';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
+  const { locale } = useRouter();
+
   return (
-    <section className="bg-gradient-to-r from-cyan-500 to-blue-500">
-      <h1>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
+    <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
+      <Image
+        src="/Google.png"
+        alt="Google Logo"
+        width={272}
+        height={92}
+        priority
+      />
+      <Search />
+      <p>
+        Google offered in:{' '}
+        <Link
+          className="underline text-blue-600"
+          href="/"
+          locale={locale === 'en' ? 'fr' : 'en'}
+        >
+          Français
+        </Link>
+      </p>
     </section>
   );
 };
@@ -15,10 +35,5 @@ const Home: NextPageWithLayout = () => {
 export default Home;
 
 Home.getLayout = (page) => {
-  return (
-    <PrimaryLayout>
-      <SidebarLayout />
-      {page}
-    </PrimaryLayout>
-  );
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };
