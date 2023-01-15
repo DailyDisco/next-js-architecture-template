@@ -8,7 +8,13 @@ const Results: NextPageWithLayout = () => {
     <section className="flex flex-col items-center gap-y-5">
       <div className={`flex flex-col space-y-8`}>
         {[...new Array(6)].map((_, idx) => {
-          return <SearchResult key={idx} {...mockSearchResultProps.base} />;
+          return (
+            <SearchResult
+              searchResults={[]}
+              key={idx}
+              {...mockSearchResultProps.base}
+            />
+          );
         })}
       </div>
     </section>
