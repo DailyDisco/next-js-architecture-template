@@ -1,6 +1,6 @@
-import PrimaryLayout from '../../../components/layouts/primary/PrimaryLayout';
-import SearchResult from '../../../components/utility/search-result/SearchResult';
-import { mockSearchResultProps } from '../../../components/utility/search-result/SearchResult.mock';
+import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
+import SearchResult from '../../components/utility/search-result/SearchResult';
+import { mockSearchResultProps } from '../../components/utility/search-result/SearchResult.mock';
 import { NextPageWithLayout } from '../page';
 
 const Results: NextPageWithLayout = () => {

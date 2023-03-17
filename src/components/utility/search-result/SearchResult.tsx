@@ -1,9 +1,9 @@
 import { GetServerSideProps } from 'next';
-import PrimaryLayout from '../../../components/layouts/primary/PrimaryLayout';
-import SearchResult from '../../../components/utility/search-result/SearchResult';
-import { IApiSearchResponseData } from '../../../src/lib/search';
-import { ISearchData } from '../../../src/lib/search/types';
-import { NextPageWithLayout } from '../../../src/pages/page';
+import { IApiSearchResponseData } from '../../../lib/search';
+import { ISearchData } from '../../../lib/search/types';
+import { NextPageWithLayout } from '../../../pages/page';
+import PrimaryLayout from '../../layouts/primary/PrimaryLayout';
+import SearchResult from './SearchResult';
 
 export interface IResults {
   searchResults: ISearchData[];

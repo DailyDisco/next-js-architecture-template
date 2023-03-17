@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
-import Search from '../../components/utility/search/Search';
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import Search from '../components/utility/search/Search';
 import { NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {

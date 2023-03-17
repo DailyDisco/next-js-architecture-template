@@ -4,7 +4,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true,
     "source.organizeImports": true
-  }
+  },
+  "cSpell.words": ["pravatar", "runtimes"]
 }
 
 // set prettier as the default formater
