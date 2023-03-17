@@ -22,7 +22,7 @@ I wanted to create a template that was easy to use and had everything I needed t
 
 Typescript, TailwindCSS, and Next JS were added to the project from the start to help with development and to make the project more secure.
 
-Thanks to Husky, and ESLint, Prettier, and Typescript, this project is ready to go for group development thanks to the pre-commit hooks.
+Thanks to Husky, and ESLint, Prettier, and Typescript, formatting and syntax is consistent. This repo is also ready to go for group development thanks to the pre-commit hooks and will show you your errors early on.
 
 Prisma, ZOD, and tRPC were added after reviewing the <a href="https://create.t3.gg/en/introduction">"T3 Stack"</a>. Prisma is a great ORM, ZOD is a great schema validation library, and tRPC is a great Typesafe API routing library.
 
