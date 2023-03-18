@@ -14,7 +14,7 @@ const Search: React.FC<ISearch> = () => {
       className="flex flex-col items-center gap-y-5"
       onSubmit={(e) => {
         e.preventDefault();
-        router.push(`/results?search=${searchTerm}`);
+        void router.push(`/results?search=${searchTerm}`);
       }}
     >
       <input

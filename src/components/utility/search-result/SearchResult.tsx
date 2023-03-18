@@ -28,6 +28,7 @@ export const getServerSideProps: GetServerSideProps<IResults> = async ({
       method: 'POST',
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     searchResults = await response.json();
   }
 

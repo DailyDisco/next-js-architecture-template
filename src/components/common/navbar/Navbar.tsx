@@ -4,12 +4,9 @@ export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {
   className?: string;
 }
 
-const Navbar: React.FC<IHeader> = ({ className, ...headerProps }) => {
+const Navbar: React.FC<IHeader> = ({ ...headerProps }) => {
   return (
-    <header
-      {...headerProps}
-      className={`flex w-full flex-row justify-between ${className}`}
-    >
+    <header {...headerProps} className={`flex w-full flex-row justify-between`}>
       <div className="m-5 space-x-5">
         <Link className="hover:underline" href="/">
           About
