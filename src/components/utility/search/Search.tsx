@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
-export interface ISearch {}
+export interface ISearch {
+  className?: string;
+}
 
 const Search: React.FC<ISearch> = () => {
   const router = useRouter();
@@ -17,7 +19,7 @@ const Search: React.FC<ISearch> = () => {
     >
       <input
         type="text"
-        className="rounded-full border-2 w-5/6 sm:w-128 h-12 px-3"
+        className="h-12 w-5/6 rounded-full border-2 px-3 sm:w-128"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />

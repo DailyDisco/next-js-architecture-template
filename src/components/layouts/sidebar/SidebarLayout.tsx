@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import styles from './SidebarLayout.module.css';
 
-export interface ISidebarLayout {}
+export interface ISidebarLayout {
+  className?: string;
+}
 
 const SidebarLayout: React.FC<ISidebarLayout> = () => {
   return (
