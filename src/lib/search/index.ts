@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { ISearchData } from '../../lib/search/types';
+import { type ISearchData } from '../../lib/search/types';
 import database from '../search/database.json';
 
 interface IApiSearchRequest extends NextApiRequest {

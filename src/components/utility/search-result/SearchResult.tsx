@@ -1,7 +1,7 @@
-import { GetServerSideProps } from 'next';
-import { IApiSearchResponseData } from '../../../lib/search';
-import { ISearchData } from '../../../lib/search/types';
-import { NextPageWithLayout } from '../../../pages/page';
+import { type GetServerSideProps } from 'next';
+import { type IApiSearchResponseData } from '../../../lib/search';
+import { type ISearchData } from '../../../lib/search/types';
+import { type NextPageWithLayout } from '../../../pages/page';
 import PrimaryLayout from '../../layouts/primary/PrimaryLayout';
 import SearchResult from './SearchResult';
 
@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps<IResults> = async ({
       },
       method: 'POST',
     });
-
+    console.log('response', response);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     searchResults = await response.json();
   }

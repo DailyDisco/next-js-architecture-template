@@ -1,4 +1,4 @@
-import { ISearchResult } from './SearchResult';
+import { type ISearchResult } from './SearchResult';
 
 const base: ISearchResult = {
   url: 'https://www.google.com',
