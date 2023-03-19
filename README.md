@@ -12,7 +12,6 @@ This is a template to help create a Next.js project with NextAuth.js and Prisma 
 - ESLint (https://eslint.org/docs/user-guide/getting-started)
 - Prettier (https://prettier.io/docs/en/index.html)
 - Husky (https://typicode.github.io/husky/#/)
-- ESLint (https://eslint.org/docs/user-guide/getting-started)
 - Zod (Schema Validation) (https://zod.dev/)
 - tRPC (Typesafe API Routing) (https://trpc.io/docs)
 
