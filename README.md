@@ -62,3 +62,29 @@ yarn dev
 ### Open [http://localhost:3000]
 
 Open http://localhost:3000 with your browser to see the result.
+
+## Commit Messages
+
+This project uses commitlint to enforce commit message conventions. This helps to keep the commit history clean and readable.
+
+Use the following commit message format:
+Ex: `fix: commit message`
+
+```jsx
+[
+'build',
+'chore',
+'ci',
+'docs',
+'feat',
+'fix',
+'perf',
+'refactor',
+'revert',
+'style',
+'test',
+'translation',
+'security',
+'changeset',
+],
+```
