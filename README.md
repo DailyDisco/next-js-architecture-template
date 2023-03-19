@@ -18,13 +18,11 @@ This is a template to help create a Next.js project with NextAuth.js and Prisma 
 
 ## Why?
 
-I wanted to create a template that was easy to use and had everything I needed to get started with a new project. I also wanted to use the latest technologies and best practices.
+I wanted to create a template that was easy to use and had everything I needed to get started with a new project.
 
-Typescript, TailwindCSS, and Next JS were added to the project from the start to help with development and to make the project more secure.
+The project began with Typescript, TailwindCSS, and Next JS, to help me development begin quickly and securely. Husky, ESLint, Prettier, were then added to help keep the code and commit history clean and readable whether working solo, or in a group.
 
-Thanks to Husky, and ESLint, Prettier, and Typescript, formatting and syntax is consistent. This repo is also ready to go for group development thanks to the pre-commit hooks and will show you your errors early on.
-
-Prisma, ZOD, and tRPC were added after reviewing the <a href="https://create.t3.gg/en/introduction">"T3 Stack"</a>. Prisma is a great ORM, ZOD is a great schema validation library, and tRPC is a great Typesafe API routing library.
+Prisma, ZOD, and tRPC were added after reviewing the <a href="https://create.t3.gg/en/introduction">"T3 Stack"</a>. Prisma is a great ORM which supports various DBs, ZOD is a schema validation library, and tRPC is a great Typesafe API routing library.
 
 ## Getting Started
 
@@ -87,4 +85,14 @@ Ex: `fix: commit message`
 'security',
 'changeset',
 ],
+```
+
+## Notes
+
+To destructure objects, use the following example format:
+
+```tsx
+    { variable1 } : { variable1: string }
+    // or
+    { variable1, variable2 } : { variable1: string, variable2: string }
 ```
