@@ -8,7 +8,7 @@ const Navbar: React.FC<IHeader> = ({ ...headerProps }) => {
   return (
     <header {...headerProps} className={`flex w-full flex-row justify-between`}>
       <div className="m-5 space-x-5">
-        <Link className="hover:underline" href="/">
+        <Link className="hover:underline" href="/about">
           About
         </Link>
         <Link className="hover:underline" href="/">
