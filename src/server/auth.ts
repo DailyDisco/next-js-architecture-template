@@ -4,10 +4,10 @@ import {
   type DefaultSession,
   type NextAuthOptions,
 } from 'next-auth';
-// import DiscordProvider from "next-auth/providers/discord";
-import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import EmailProvider from 'next-auth/providers/email';
-import { prisma } from '~/server/db';
+import DiscordProvider from 'next-auth/providers/discord';
+// import { PrismaAdapter } from '@next-auth/prisma-adapter';
+// import EmailProvider from 'next-auth/providers/email';
+// import { prisma } from '~/server/db';
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -45,16 +45,20 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
   },
-  adapter: PrismaAdapter(prisma),
+  // adapter: PrismaAdapter(prisma),
   providers: [
-    // DiscordProvider({
-    //     clientId: env.DISCORD_CLIENT_ID,
-    //     clientSecret: env.DISCORD_CLIENT_SECRET,
-    // }),
-    EmailProvider({
-      server: process.env.EMAIL_SERVER,
-      from: process.env.EMAIL_FROM,
+    DiscordProvider({
+      clientId: process.env.DISCORD_CLIENT_ID!,
+      clientSecret: process.env.DISCORD_CLIENT_SECRET!,
     }),
+    // GoogleProvider({
+    //   clientId: process.env.GOOGLE_ID,
+    //   clientSecret: process.env.GOOGLE_SECRET,
+    // }),
+    // EmailProvider({
+    //   server: process.env.EMAIL_SERVER,
+    //   from: process.env.EMAIL_FROM,
+    // }),
     /**
      * ...add more providers here.
      *

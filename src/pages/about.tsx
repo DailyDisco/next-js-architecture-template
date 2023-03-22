@@ -37,7 +37,7 @@ export default About;
 
 About.getLayout = (page) => {
   return (
-    <PrimaryLayout>
+    <PrimaryLayout session={null}>
       <SidebarLayout />
       {page}
     </PrimaryLayout>

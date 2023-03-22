@@ -1,13 +1,15 @@
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+// import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import Search from '../components/utility/search/Search';
 import { type NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
+  const { data: session } = useSession();
   const { locale } = useRouter();
-
+  console.log(session);
   return (
     <section className="mt-12 flex flex-col items-center gap-y-5 sm:mt-36">
       <Image
@@ -34,6 +36,6 @@ const Home: NextPageWithLayout = () => {
 
 export default Home;
 
-Home.getLayout = (page) => {
-  return <PrimaryLayout>{page}</PrimaryLayout>;
-};
+// Home.getLayout = (page) => {
+//   return <PrimaryLayout>{page}</PrimaryLayout>;
+// };
