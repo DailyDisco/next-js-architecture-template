@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import Search from '../components/utility/search/Search';
-import { NextPageWithLayout } from './page';
+import { type NextPageWithLayout } from './page';
 
 const Home: NextPageWithLayout = () => {
   const { locale } = useRouter();
 
   return (
-    <section className="flex flex-col items-center gap-y-5 mt-12 sm:mt-36">
+    <section className="mt-12 flex flex-col items-center gap-y-5 sm:mt-36">
       <Image
         src="/Google.png"
         alt="Google Logo"
@@ -21,7 +21,7 @@ const Home: NextPageWithLayout = () => {
       <p>
         Google offered in:{' '}
         <Link
-          className="underline text-blue-600"
+          className="text-blue-600 underline"
           href="/"
           locale={locale === 'en' ? 'fr' : 'en'}
         >

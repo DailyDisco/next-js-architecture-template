@@ -1,5 +1,5 @@
-import { NextPage } from 'next';
-import { ComponentType, ReactElement, ReactNode } from 'react';
+import { type NextPage } from 'next';
+import { type ComponentType, type ReactElement, type ReactNode } from 'react';
 
 export type NextPageWithLayout<
   P = {
