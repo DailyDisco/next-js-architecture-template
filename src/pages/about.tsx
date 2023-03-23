@@ -1,5 +1,5 @@
 import SidebarLayout from '../components/common/sidebar/SidebarLayout';
-import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import PrimaryLayout from '../components/layouts/PrimaryLayout';
 import { type NextPageWithLayout } from './page';
 
 const About: NextPageWithLayout = () => {

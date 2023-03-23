@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
-import PrimaryLayout from '~/components/layouts/primary/PrimaryLayout';
+import PrimaryLayout from '~/components/layouts/PrimaryLayout';
 import '../styles/globals.css';
 import { type NextPageWithLayout } from './page';
 

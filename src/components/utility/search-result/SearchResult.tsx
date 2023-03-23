@@ -2,7 +2,7 @@ import { type GetServerSideProps } from 'next';
 import { type IApiSearchResponseData } from '../../../lib/search';
 import { type ISearchData } from '../../../lib/search/types';
 import { type NextPageWithLayout } from '../../../pages/page';
-import PrimaryLayout from '../../layouts/primary/PrimaryLayout';
+import PrimaryLayout from '../../layouts/PrimaryLayout';
 import SearchResult from './SearchResult';
 
 export interface IResults {

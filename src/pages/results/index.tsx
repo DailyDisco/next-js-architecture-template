@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import PrimaryLayout from '../../components/layouts/primary/PrimaryLayout';
+import PrimaryLayout from '../../components/layouts/PrimaryLayout';
 import SearchResult from '../../components/utility/search-result/SearchResult';
 import { mockSearchResultProps } from '../../components/utility/search-result/SearchResult.mock';
 import { type NextPageWithLayout } from '../page';
