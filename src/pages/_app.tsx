@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { SessionProvider } from 'next-auth/react';
+import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 import PrimaryLayout from '~/components/layouts/PrimaryLayout';
 import '../styles/globals.css';
@@ -28,9 +29,11 @@ function MyApp({
   return (
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     <SessionProvider session={session}>
-      <PrimaryLayout session={session}>
-        <Component {...pageProps} />
-      </PrimaryLayout>
+      <ThemeProvider>
+        <PrimaryLayout session={session}>
+          <Component {...pageProps} />
+        </PrimaryLayout>
+      </ThemeProvider>
     </SessionProvider>
   );
 }

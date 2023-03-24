@@ -25,9 +25,5 @@ const Results: NextPageWithLayout = () => {
 export default Results;
 
 Results.getLayout = (page) => {
-  return (
-    <PrimaryLayout session={null} justify="items-start">
-      {page}
-    </PrimaryLayout>
-  );
+  return <PrimaryLayout session={null}>{page}</PrimaryLayout>;
 };

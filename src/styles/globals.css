@@ -4,6 +4,17 @@
 
 @layer components {
   .btn-primary {
-    @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
+    @apply rounded-md border-0 bg-slate-100 p-2 px-6 dark:bg-white dark:text-black;
   }
+}
+
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
 }
