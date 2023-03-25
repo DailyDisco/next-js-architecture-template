@@ -1,3 +1,4 @@
+import { useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +8,8 @@ import { api } from "../utils/api";
 import { type NextPageWithLayout } from "./page";
 
 const Home: NextPageWithLayout = () => {
+  const user = useUser();
+  console.log(user.user);
   const { locale } = useRouter();
   const { data } = api.example.getAll.useQuery();
   console.log(data, "data from tRPC call");
