@@ -23,6 +23,19 @@ export const exampleRouter = createTRPCRouter({
     return ctx.prisma.post.findMany();
   }),
 
+  create: protectedProcedure
+    .input(z.object({ title: z.string(), content: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const authorId = ctx.currentUser.id;
+      const post = await ctx.prisma.post.create({
+        data: {
+          authorId,
+          content: input.content,
+        },
+      });
+      return post;
+    }),
+
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";
   }),

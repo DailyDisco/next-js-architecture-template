@@ -1,5 +1,28 @@
 import { z } from "zod";
 
+/* zod primitive type */
+// // primitive values
+// z.string();
+// z.number();
+// z.bigint();
+// z.boolean();
+// z.date();
+// z.symbol();
+
+// // empty types
+// z.undefined();
+// z.null();
+// z.void(); // accepts undefined
+
+// // catch-all types
+// // allows any value
+// z.any();
+// z.unknown();
+
+// // never type
+// // allows no values
+// z.never();
+
 /**
  * Specify your server-side environment variables schema here. This way you can ensure the app isn't
  * built with invalid env vars.
