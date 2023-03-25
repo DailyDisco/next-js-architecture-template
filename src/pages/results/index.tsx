@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import PrimaryLayout from '../../components/layouts/PrimaryLayout';
-import SearchResult from '../../components/utility/search-result/SearchResult';
-import { mockSearchResultProps } from '../../components/utility/search-result/SearchResult.mock';
-import { type NextPageWithLayout } from '../page';
+import PrimaryLayout from "../../components/layouts/PrimaryLayout";
+import SearchResult from "../../components/utility/search-result/SearchResult";
+import { mockSearchResultProps } from "../../components/utility/search-result/SearchResult.mock";
+import { type NextPageWithLayout } from "../page";
 
 const Results: NextPageWithLayout = () => {
   return (
@@ -25,5 +25,5 @@ const Results: NextPageWithLayout = () => {
 export default Results;
 
 Results.getLayout = (page) => {
-  return <PrimaryLayout session={null}>{page}</PrimaryLayout>;
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };

@@ -4,13 +4,10 @@ import ThemeChanger from "./ThemeChanger";
 
 export interface IHeader extends React.ComponentPropsWithoutRef<"header"> {
   className?: string;
-  session: unknown;
 }
 
 const Navbar: React.FC<IHeader> = ({ ...headerProps }) => {
   const user = useUser();
-  // console.log(useSession(), 'useSession()');
-  // console.log(session, 'session in session');
   return (
     <header {...headerProps} className="flex w-full flex-row justify-between">
       <div className="m-7 my-auto flex space-x-5 text-lg">

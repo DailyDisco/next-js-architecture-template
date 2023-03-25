@@ -1,15 +1,15 @@
-import { type GetServerSideProps } from 'next';
-import { type IApiSearchResponseData } from '../../../lib/search';
-import { type ISearchData } from '../../../lib/search/types';
-import { type NextPageWithLayout } from '../../../pages/page';
-import PrimaryLayout from '../../layouts/PrimaryLayout';
-import SearchResult from './SearchResult';
+import { type GetServerSideProps } from "next";
+import { type IApiSearchResponseData } from "../../../lib/search";
+import { type ISearchData } from "../../../lib/search/types";
+import { type NextPageWithLayout } from "../../../pages/page";
+import PrimaryLayout from "../../layouts/PrimaryLayout";
+import SearchResult from "./SearchResult";
 
 export interface IResults {
   searchResults: ISearchData[];
 }
 
-export type ISearchResult = ISearchData & React.ComponentPropsWithoutRef<'div'>;
+export type ISearchResult = ISearchData & React.ComponentPropsWithoutRef<"div">;
 
 export const getServerSideProps: GetServerSideProps<IResults> = async ({
   query,
@@ -23,11 +23,11 @@ export const getServerSideProps: GetServerSideProps<IResults> = async ({
     const response = await fetch(`http://localhost:3000/api/search`, {
       body: JSON.stringify({ searchTerm }),
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
-      method: 'POST',
+      method: "POST",
     });
-    console.log('response', response);
+    console.log("response", response);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     searchResults = await response.json();
   }
@@ -65,5 +65,5 @@ const Results: NextPageWithLayout<IResults> = ({ searchResults }) => {
 export default Results;
 
 Results.getLayout = (page) => {
-  return <PrimaryLayout session={null}>{page}</PrimaryLayout>;
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };

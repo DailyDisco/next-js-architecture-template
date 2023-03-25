@@ -1,6 +1,6 @@
-import SidebarLayout from '~/components/common/sidebar/SidebarLayout';
-import PrimaryLayout from '~/components/layouts/PrimaryLayout';
-import { type NextPageWithLayout } from './page';
+import SidebarLayout from "~/components/common/sidebar/SidebarLayout";
+import PrimaryLayout from "~/components/layouts/PrimaryLayout";
+import { type NextPageWithLayout } from "./page";
 
 const About: NextPageWithLayout = () => {
   return (
@@ -28,7 +28,7 @@ const About: NextPageWithLayout = () => {
           </p>
           <h3>Try It Out</h3>
           <p className="mb-3">
-            To visualize this, try tying in the search input in the{' '}
+            To visualize this, try tying in the search input in the{" "}
             <code>Sidebar</code> and then changing routes. You&apos;ll notice
             the input state is persisted.
           </p>
@@ -41,5 +41,5 @@ const About: NextPageWithLayout = () => {
 export default About;
 
 About.getLayout = (page) => {
-  return <PrimaryLayout session={null}>{page}</PrimaryLayout>;
+  return <PrimaryLayout>{page}</PrimaryLayout>;
 };
