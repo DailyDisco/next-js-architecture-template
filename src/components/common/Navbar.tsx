@@ -1,14 +1,14 @@
-import { signIn, signOut, useSession } from 'next-auth/react';
-import Link from 'next/link';
-import ThemeChanger from '../ThemeChanger';
+import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
+import Link from "next/link";
+import ThemeChanger from "./ThemeChanger";
 
-export interface IHeader extends React.ComponentPropsWithoutRef<'header'> {
+export interface IHeader extends React.ComponentPropsWithoutRef<"header"> {
   className?: string;
   session: unknown;
 }
 
 const Navbar: React.FC<IHeader> = ({ ...headerProps }) => {
-  const { data: session } = useSession();
+  const user = useUser();
   // console.log(useSession(), 'useSession()');
   // console.log(session, 'session in session');
   return (
@@ -33,22 +33,14 @@ const Navbar: React.FC<IHeader> = ({ ...headerProps }) => {
           <div className="my-auto mt-2 flex items-center">
             <ThemeChanger />
           </div>
-          {!session ? (
-            <button
-              // eslint-disable-next-line @typescript-eslint/no-misused-promises
-              onClick={() => signIn('discord')}
-              className="border-1 sm:px-6 my-auto rounded bg-blue-500 p-2 px-4 text-white"
-            >
-              Sign In
-            </button>
+          {!user.isSignedIn ? (
+            <div className="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
+              <SignInButton />
+            </div>
           ) : (
-            <button
-              // eslint-disable-next-line @typescript-eslint/no-misused-promises
-              onClick={() => signOut()}
-              className="border-1 sm:px-6 my-auto rounded bg-blue-500 p-2 px-4 text-white"
-            >
-              Sign Out
-            </button>
+            <div className="rounded bg-red-500 py-2 px-4 font-bold text-white hover:bg-red-700">
+              <SignOutButton />
+            </div>
           )}
         </div>
       </div>

@@ -1,17 +1,17 @@
-import { useSession } from 'next-auth/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useSession } from "next-auth/react";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 // import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
-import Search from '../components/utility/search/Search';
-import { type NextPageWithLayout } from './page';
+import Search from "../components/utility/search/Search";
+import { type NextPageWithLayout } from "./page";
 
 const Home: NextPageWithLayout = () => {
   const { data: session } = useSession();
   const { locale } = useRouter();
   console.log(session);
   return (
-    <section className="mt-12 flex flex-col items-center gap-y-5 sm:mt-36">
+    <section className="sm:mt-36 mt-12 flex flex-col items-center gap-y-5">
       <Image
         src="/Google.png"
         alt="Google Logo"
@@ -21,11 +21,11 @@ const Home: NextPageWithLayout = () => {
       />
       <Search />
       <p>
-        Google offered in:{' '}
+        Google offered in:{" "}
         <Link
           className="text-blue-600 underline"
           href="/"
-          locale={locale === 'en' ? 'fr' : 'en'}
+          locale={locale === "en" ? "fr" : "en"}
         >
           Français
         </Link>
